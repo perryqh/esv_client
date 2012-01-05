@@ -1,0 +1,210 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.esvapi.org:80/v2/rest/passageQuery
+    body: !!null 
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      include-passage-references:
+      - 'true'
+      include-footnotes:
+      - 'false'
+      include-headings:
+      - 'false'
+      include-subheadings:
+      - 'false'
+      include-audio-link:
+      - 'true'
+      include-short-copyright:
+      - 'true'
+      incude-passage-horizontal-lines:
+      - 'false'
+      include-heading-horizontal-lines:
+      - 'false'
+      passage:
+      - John 1:12-13
+      key:
+      - f5dcd3003d1a8ced
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/0.7.62
+      date:
+      - Wed, 04 Jan 2012 20:01:17 GMT
+      content-type:
+      - text/html
+      connection:
+      - keep-alive
+      content-location:
+      - passageQuery.php
+      vary:
+      - negotiate
+      tcn:
+      - choice
+      x-powered-by:
+      - PHP/5.2.10-2ubuntu6.4
+      expires:
+      - Thu, 05 Jan 2012 20:01:17 +0000
+      content-length:
+      - '116'
+    body: ! 'ERROR: No key was submitted. Please use your access key, the testing
+      key ''TEST'', or the key ''IP'' for IP-based access'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.esvapi.org:80/v2/rest/passageQuery?key=f5dcd3003d1a8ced
+    body: !!null 
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      include-passage-references:
+      - 'true'
+      include-footnotes:
+      - 'false'
+      include-headings:
+      - 'false'
+      include-subheadings:
+      - 'false'
+      include-audio-link:
+      - 'true'
+      include-short-copyright:
+      - 'true'
+      incude-passage-horizontal-lines:
+      - 'false'
+      include-heading-horizontal-lines:
+      - 'false'
+      passage:
+      - John 1:12-13
+      key:
+      - f5dcd3003d1a8ced
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/0.7.62
+      date:
+      - Wed, 04 Jan 2012 20:05:45 GMT
+      content-type:
+      - text/html
+      connection:
+      - keep-alive
+      content-location:
+      - passageQuery.php
+      vary:
+      - negotiate
+      tcn:
+      - choice
+      x-powered-by:
+      - PHP/5.2.10-2ubuntu6.4
+      expires:
+      - Thu, 05 Jan 2012 20:05:45 +0000
+      content-length:
+      - '27'
+    body: ! 'ERROR: No query to look up.'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.esvapi.org:80/v2/rest/passageQuery?key=f5dcd3003d1a8ced&passage=John+1%3A12-13&include_passage_references=true&include_footnotes=false&include_headings=false&include_subheadings=false&include_audio_link=true&include_short_copyright=true&incude_passage_horizontal_lines=false&include_heading_horizontal_lines=false
+    body: !!null 
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/0.7.62
+      date:
+      - Thu, 05 Jan 2012 02:16:18 GMT
+      content-type:
+      - text/html
+      connection:
+      - keep-alive
+      content-location:
+      - passageQuery.php
+      vary:
+      - negotiate
+      tcn:
+      - choice
+      x-powered-by:
+      - PHP/5.2.10-2ubuntu6.4
+      content-length:
+      - '773'
+    body: ! '<div class="esv"><h2>John 1:12-13 <object type="application/x-shockwave-flash"  data="http://www.esvapi.org/assets/play.swf?myUrl=hw%2F43001012-43001013"
+      width="40" height="12" class="audio"><param name="movie" value="http://www.esvapi.org/assets/play.swf?myUrl=hw%2F43001012-43001013"
+      /><param name="wmode" value="transparent" /></object></h2>
+
+      <div class="esv-text"><p id="p43001012.01-1"><span class="verse-num" id="v43001012-1">12&nbsp;</span>But
+      to all who did receive him, who believed in his name, he gave the right to become
+      children of God, <span class="verse-num" id="v43001013-1">13&nbsp;</span>who
+      were born, not of blood nor of the will of the flesh nor of the will of man,
+      but of God.  (<a href="http://www.esv.org" class="copyright">ESV</a>)</p>
+
+      </div>
+
+      </div>'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.esvapi.org:80/v2/rest/passageQuery?key=f5dcd3003d1a8ced&passage=John+1%3A12-13&include-passage-references=true&include-footnotes=false&include-headings=false&include-subheadings=false&include-audio-link=true&include-short-copyright=true&incude-passage-horizontal-lines=false&include-heading-horizontal-lines=false
+    body: !!null 
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/0.7.62
+      date:
+      - Thu, 05 Jan 2012 02:28:57 GMT
+      content-type:
+      - text/html
+      connection:
+      - keep-alive
+      content-location:
+      - passageQuery.php
+      vary:
+      - negotiate
+      tcn:
+      - choice
+      x-powered-by:
+      - PHP/5.2.10-2ubuntu6.4
+      content-length:
+      - '773'
+    body: ! '<div class="esv"><h2>John 1:12-13 <object type="application/x-shockwave-flash"  data="http://www.esvapi.org/assets/play.swf?myUrl=hw%2F43001012-43001013"
+      width="40" height="12" class="audio"><param name="movie" value="http://www.esvapi.org/assets/play.swf?myUrl=hw%2F43001012-43001013"
+      /><param name="wmode" value="transparent" /></object></h2>
+
+      <div class="esv-text"><p id="p43001012.01-1"><span class="verse-num" id="v43001012-1">12&nbsp;</span>But
+      to all who did receive him, who believed in his name, he gave the right to become
+      children of God, <span class="verse-num" id="v43001013-1">13&nbsp;</span>who
+      were born, not of blood nor of the will of the flesh nor of the will of man,
+      but of God.  (<a href="http://www.esv.org" class="copyright">ESV</a>)</p>
+
+      </div>
+
+      </div>'
+    http_version: '1.1'

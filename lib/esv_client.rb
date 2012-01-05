@@ -1,4 +1,5 @@
 require "esv_client/version"
+require 'rest-client'
 
 base = File.expand_path(File.dirname(__FILE__))
 require File.join(base, 'esv_client/version')

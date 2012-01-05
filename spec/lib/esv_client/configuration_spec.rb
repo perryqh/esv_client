@@ -23,7 +23,7 @@ describe EsvClient::Configuration do
         :include_heading_horizontal_lines => false
       } }
     specify { subject.esv_query_url.should  == "http://www.esvapi.org/v2/rest/passageQuery" }
-    specify { subject.esv_key.should be_nil }
+    specify { subject.esv_key.should == TEST_ESV_KEY }
   end
 
   describe 'configure' do
