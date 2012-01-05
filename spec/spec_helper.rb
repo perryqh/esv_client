@@ -14,7 +14,7 @@ RSpec.configure do |config|
   config.extend VCR::RSpec::Macros
 end
 
-TEST_ESV_KEY = 'f5dcd3003d1a8ced'
+TEST_ESV_KEY = ENV['ESV_API_KEY']
 EsvClient::Client.configure do |conf|
   conf.esv_key = TEST_ESV_KEY
 end
